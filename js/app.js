@@ -4,7 +4,30 @@ window.onload = function(event) {
 	document.getElementById("copyright-year").textContent = (new Date()).getFullYear();
 
 	function chunk(array, number) {
+		let copy = array.split(" ").slice();
+		let integer = Number(number);
+		if (array === "" || number === "") {
+			return "Input fields must not be empty";
+		} else if (isNaN(number) || number.indexOf("e") > -1) {
+			return "Second input must only contain numbers";
+		} else if (number < chunked.length) {
+			return "Second input must be not be less than the number of items in the first input";
+		} else if () {
+			return "First input must not contain two adjacent white spaces";
+		} else {
+			let chunked = [];
+			let i = 0;
+			let n = integer;
 
+			while (i < array.length) {
+				chunked.push(copy.slice(i, n));
+
+				i = i + size;
+				n = n + size;
+			}
+
+			return chunked;
+		}
 	}
 
 	function toggle(chevron) {
@@ -28,13 +51,11 @@ window.onload = function(event) {
 	let chevron = document.getElementsByClassName("fas")[0];
 	chevron.addEventListener("click", function(event) {
 		toggle(this);
-		console.log(1);
 	});
 
 	chevron.addEventListener("keydown", function(event) {
 		if (event.keyCode === 13 || event.keyCode === 32) {
 			toggle(this);
-			console.log(2);
 		}
 	});
 
