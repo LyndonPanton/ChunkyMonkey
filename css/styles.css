@@ -80,10 +80,6 @@ main {
 	font-size: 1.2em;
 }
 
-.form-input:focus {
-	font-weight: 600;
-}
-
 .form-input::placeholder {
 	opacity: 0.6;
 	color: black;
