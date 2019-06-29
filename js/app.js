@@ -13,6 +13,10 @@ window.onload = function(event) {
 			return display("Second input must be not be less than the number of items in the first input", "???");
 		} else if (/\s\s/.test(array)) {
 			return display("First input must not contain two adjacent white spaces", "???");
+		} else if (integer <= 0) {
+			return display("Second input must be more than zero", "???");
+		} else if (integer % 1 !== 0) {
+			return display("Second input must be an integer", "???");
 		} else {
 			let chunked = [];
 			let i = 0;
