@@ -3,6 +3,10 @@
 window.onload = function(event) {
 	document.getElementById("copyright-year").textContent = (new Date()).getFullYear();
 
+	function chunk(array, number) {
+
+	}
+
 	function toggle(chevron) {
 		let task = document.getElementById("task");
 
@@ -32,5 +36,12 @@ window.onload = function(event) {
 			toggle(this);
 			console.log(2);
 		}
+	});
+
+	let form = document.getElementById("form");
+	form.addEventListener("submit", function(event) {
+		event.preventDefault();
+
+		chunk(this.children[0].value, this.children[1].value);
 	});
 };
