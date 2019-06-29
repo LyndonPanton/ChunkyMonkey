@@ -27,8 +27,14 @@ window.onload = function(event) {
 				n = n + integer;
 			}
 
-			console.log(copy, chunked);
-			return display(copy, chunked);
+			// console.log(copy, chunked);
+			let chunkedString = chunked.map(function(chunk) {
+				return "[" + chunk + "]";
+			});
+
+			chunkedString.toString();
+
+			return display(copy, chunkedString);
 		}
 	}
 
