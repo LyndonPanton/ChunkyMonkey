@@ -107,3 +107,36 @@ main {
 
 
 /* FOOTER */
+footer {
+	position: absolute;
+	bottom: 0;
+	min-width: 100%;
+	padding: 1vh 0;
+	background-color: #8D6EAD;
+	color: white;
+}
+
+.more-link {
+	color: black;
+}
+
+.more-link:active {
+	color: pink !important;
+}
+
+.more-link:hover {
+	color: lightgreen;
+}
+
+#copyright {
+	display: block;
+}
+
+#more {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+	padding: 1vh 0 0;
+	font-size: 1.2em;
+}
