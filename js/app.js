@@ -26,8 +26,8 @@ window.onload = function(event) {
 			}
 
 			let chunkedString = chunked.map(function(chunk) {
-				return "[" + chunk + "]";
-			});
+				return "[" + chunk.join(", ") + "]";
+			}).join(", ");
 
 			chunkedString.toString();
 
