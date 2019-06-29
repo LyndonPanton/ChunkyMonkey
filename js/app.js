@@ -11,7 +11,7 @@ window.onload = function(event) {
 			return display("Both inputs must not be empty", "???");
 		} else if (isNaN(number) || number.indexOf("e") > -1) {
 			return display("Second input must only contain numbers", "???");
-		} else if (number < chunked.length) {
+		} else if (integer > copy.length) {
 			return display("Second input must be not be less than the number of items in the first input", "???");
 		} else if (/\s\s/.test(array)) {
 			return display("First input must not contain two adjacent white spaces", "???");
@@ -27,7 +27,6 @@ window.onload = function(event) {
 				n = n + integer;
 			}
 
-			// console.log(copy, chunked);
 			let chunkedString = chunked.map(function(chunk) {
 				return "[" + chunk + "]";
 			});
