@@ -6,28 +6,35 @@ window.onload = function(event) {
 	function chunk(array, number) {
 		let copy = array.split(" ").slice();
 		let integer = Number(number);
+		console.log(integer);
 		if (array === "" || number === "") {
-			return "Input fields must not be empty";
+			return display("???", "???");
 		} else if (isNaN(number) || number.indexOf("e") > -1) {
-			return "Second input must only contain numbers";
+			return display("Second input must only contain numbers", "???");
 		} else if (number < chunked.length) {
-			return "Second input must be not be less than the number of items in the first input";
-		} else if () {
-			return "First input must not contain two adjacent white spaces";
+			return display("Second input must be not be less than the number of items in the first input", "???");
+		} else if (/\s\s/.test(array)) {
+			return display("First input must not contain two adjacent white spaces", "???");
 		} else {
 			let chunked = [];
 			let i = 0;
 			let n = integer;
 
-			while (i < array.length) {
+			while (i < copy.length) {
 				chunked.push(copy.slice(i, n));
 
-				i = i + size;
-				n = n + size;
+				i = i + integer;
+				n = n + integer;
 			}
 
-			return chunked;
+			console.log(copy, chunked);
+			return display(copy, chunked);
 		}
+	}
+
+	function display(original, chunked) {
+		document.getElementById("original-value").textContent = "[" + original + "]";
+		document.getElementById("chunked-value").textContent = "[" + chunked + "]";
 	}
 
 	function toggle(chevron) {
