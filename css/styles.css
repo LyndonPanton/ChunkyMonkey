@@ -52,7 +52,57 @@ header {
 	text-decoration: underline;
 }
 
+
+
 /* MAIN */
+input {
+	display: block;
+	margin: 0 auto 3vh;
+	text-align: center;
+}
+
+main {
+	padding-top: 15vh;
+}
+
+.display {
+	margin: 0 25vw 1vh;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 1vh 0;
+}
+
+.form-input {
+	border: none;
+	border-bottom: 1px #8D6EAD solid;
+	background-color: transparent;
+	font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+	font-size: 1.2em;
+}
+
+.form-input:focus {
+	font-weight: 600;
+}
+
+.form-input::placeholder {
+	opacity: 0.6;
+	color: black;
+}
+
+#form-submit {
+	margin-bottom: 10vh;
+	border: 2px indianred solid;
+	border-radius: 5px;
+	padding: 1vh 4vw;
+	background-color: snow;
+	font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+	font-size: 1.1em;
+}
+
+#form-submit:active {
+	border-color: seagreen;
+	background-color: #EEFFFF;	
+}
 
 
 
