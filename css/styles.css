@@ -20,7 +20,7 @@ body, html {
 /* HEADER */
 h1 {
 	margin: 0;
-	padding: 1vh;
+	padding: 1vh 0;
 }
 
 header {
@@ -43,6 +43,8 @@ header {
 }
 
 #task {
+	position: absolute;
+	z-index: 1;
 	padding: 0.5em 10vw;
 	background-color: #55D6BE;
 	color: black;
