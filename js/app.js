@@ -31,7 +31,7 @@ window.onload = function(event) {
 
 			chunkedString.toString();
 
-			return display(copy, chunkedString);
+			return display(copy.join(", "), chunkedString);
 		}
 	}
 
