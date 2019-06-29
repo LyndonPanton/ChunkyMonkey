@@ -1,4 +1,4 @@
-# Chunk Monkey
+# Chunky Monkey
 
 ## How To Open
 > 1. Go to the project's download folder
