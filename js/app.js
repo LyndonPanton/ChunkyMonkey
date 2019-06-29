@@ -6,11 +6,9 @@ window.onload = function(event) {
 	function chunk(array, number) {
 		let copy = array.split(" ").slice();
 		let integer = Number(number);
-		console.log(integer);
+
 		if (array === "" || number === "") {
 			return display("Both inputs must not be empty", "???");
-		} else if (isNaN(number) || number.indexOf("e") > -1) {
-			return display("Second input must only contain numbers", "???");
 		} else if (integer > copy.length) {
 			return display("Second input must be not be less than the number of items in the first input", "???");
 		} else if (/\s\s/.test(array)) {
