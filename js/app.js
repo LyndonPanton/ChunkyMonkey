@@ -8,7 +8,7 @@ window.onload = function(event) {
 		let integer = Number(number);
 		console.log(integer);
 		if (array === "" || number === "") {
-			return display("???", "???");
+			return display("Both inputs must not be empty", "???");
 		} else if (isNaN(number) || number.indexOf("e") > -1) {
 			return display("Second input must only contain numbers", "???");
 		} else if (number < chunked.length) {
@@ -33,8 +33,13 @@ window.onload = function(event) {
 	}
 
 	function display(original, chunked) {
-		document.getElementById("original-value").textContent = "[" + original + "]";
-		document.getElementById("chunked-value").textContent = "[" + chunked + "]";
+		if (chunked === "???") {
+			document.getElementById("original-value").textContent = original;
+			document.getElementById("chunked-value").textContent = "???"
+		} else {
+			document.getElementById("original-value").textContent = "[" + original + "]";
+			document.getElementById("chunked-value").textContent = "[" + chunked + "]";
+		}
 	}
 
 	function toggle(chevron) {
